@@ -1,0 +1,178 @@
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  width: 100%;
+}
+
+[data-bs-theme="light"] {
+  --bs-body-bg: #0bda51;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #023020;
+}
+
+[data-bs-theme="dark"] .btnMode {
+  --bs-body-bg: #023020;
+  color: #f9f6ee;
+}
+
+[data-bs-theme="dark"] .page-link {
+  --bs-body-bg: #023020;
+  color: #f9f6ee;
+}
+
+.loadingBar {
+  background-color: green;
+  height: 0.125rem;
+  width: 0%;
+}
+
+.logo {
+  font-family: "Creepster", system-ui;
+  color: #01b4c6;
+  -webkit-text-stroke-width: 0.0006rem;
+  -webkit-text-stroke-color: #fff874;
+}
+
+.navBar {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bolder;
+  font-size: 1.375rem;
+  & .options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-decoration: none;
+  }
+
+  & .options .btnMode {
+    border-radius: 10px;
+    background-color: #778899;
+    color: #faf9f6;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-family: "Creepster", system-ui;
+  color: #01b4c6;
+  -webkit-text-stroke-width: 0.0006rem;
+  -webkit-text-stroke-color: #fff874;
+}
+
+.cardHolder {
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.cardImg {
+  border-radius: 15px;
+  max-width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.textOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.5));
+  color: white;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .textOverlay {
+  opacity: 1;
+}
+
+.card:hover .cardImg {
+  transform: scale(1.1);
+}
+
+.textOverlay h3 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.textOverlay p {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.page-link {
+  text-decoration: none;
+  color: #f9f6ee;
+  cursor: pointer;
+  background-color: #097969;
+}
+
+.page-link:hover {
+  text-decoration: none;
+  color: #222222;
+  cursor: pointer;
+  background-color: #00a36c;
+}
+
+#goTop {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-image: url("images/arrowhead-up.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: oklch(51.68% 0.0924 179.04);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#goTop:hover {
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2), 0px 4px 9px rgba(0, 0, 0, 0.3);
+}
+
+#goTop:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin: 0 auto;
+  }
+}
