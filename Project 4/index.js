@@ -12,7 +12,7 @@ const loadCharacter = async () => {
     );
     const character = await response.json();
     characterHolder.innerHTML +=
-      ` <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+      ` <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center">
       <a href="view.html?characterName=` +
       character.name +
       `">
