@@ -1,149 +1,70 @@
-.main-container {
-    background-color: rgb(255, 255, 255);
+
+
+:root{
+    --clr-white: #ffffff;
+    --clr-black: #28282B;
+    --clr-gray: #C0C0C0;
+
+    --fs-subheading: 19px;
+    --fs-paragraph: 13px;
+}
+
+
+html,body{
+   margin: 0;
+   overflow-x: clip;
+   background-color: var(--clr-white);
+   font-family: "Helvetica", sans-serif;
+}
+
+h3{
+    font-size: clamp(23px, 5vw, 40px);
     text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    color: 1D1D1F;
-    font-family: "Arial";
+    color: var(--clr-gray);
+    font-weight: bold;
 }
 
+h5{
+    font-size: var(--fs-subheading);
+    text-align: center;
+    color: var(--clr-black);
+    font-weight: bold;
 
-.color-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
-img {
-    width: 500px;
-    max-width: 500px;
+p{
+    font-size: var(--fs-paragraph);
+    color: var(--clr-black);
+}
+
+.card-img-top{
+    width: 100%;
     height: auto;
 }
 
-.title-container {
-    font-family: 'Arial';
-    font-size: 36px;
-    margin-top: 50px;
-    
+.frame{
+    height: 30vh;
 }
 
-.iphone-intro {
-    font-family: 'Arial';
-    font-weight: bolder;
-    font-size: 42px;
-    max-width: 960px;
-    margin-bottom: 50px;
-    display: flex;
+@media (min-width: 768px){
+    :root{
+        --fs-subheading: 23px;
+        --fs-paragraph: 16px;   
+    }
 }
 
-.title-color {
-    font-family: 'Arial';
-    font-size: 36px;
-    /* background-color: rgb(255, 255, 255); */
-    width: 100%;
-    padding-top: 40px;
-    box-sizing: border-box;
-    margin-top: 50px;
-    margin-bottom: 50px;
+@media (min-width: 768px){
+    .frame{
+        height: 70vh;
+    }
 }
 
-.color-back-container{
-    background-color: rgba(250, 248, 246, 1);
-    width: 100%;
-    
+@media (min-width: 1024px){
+    .frame{
+        height: 90vh;
+    }
 }
 
-.ques{
-    width: 100%;
-    font-size: 48px;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    font-weight: bold;
-    
-}
 
-.more-colors{
-    background-color: rgb(255, 255, 255);
-    width: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    margin-top: 20px;
-}
 
-.vid{
-    margin-bottom: 50px;
-    border-radius: 30px; 
-    overflow: hidden;
-    display: flex;
-}
 
-.summary {
-    font-size: 42px;
-    font-family: 'Arial';
-    text-align: center;
-    padding-left: 35px;
-    padding-top: 20px;
-}
-
-.capacity {
-    font-family: 'Arial';
-    text-align: center;
-    padding-top: 40px;
-    padding-left: 30px;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.list, .list li{
-    font-size: 20px;
-    font-family: 'Roboto';
-    padding-top: 20px;
-    text-align: center;
-    list-style-type: none;
-}
-
-.display {
-    font-family: 'Arial';
-    text-align: center;
-    padding-top: 40px;
-    padding-left: 30px;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.waterproof {
-    font-family: 'Arial';
-    text-align: center;
-    padding-top: 40px;
-    padding-left: 30px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.camera {
-    font-family: 'Arial';
-    text-align: center;
-    padding-top: 40px;
-    padding-left: 30px;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.chip {
-    font-family: 'Arial';
-    text-align: center;
-    padding-top: 40px;
-    padding-left: 30px;
-    font-size: 32px;
-    font-weight: bold;
-}

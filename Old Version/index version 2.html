@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anyl Uriarte — Info</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Resources/SOLITUDE.png" />
+    <link href="https://fonts.cdnfonts.com/css/rubik-2" rel="stylesheet" />
+  </head>
+
+  <body id="body" data-bs-theme="light">
+    <div class="container-fluid">
+      <div class="row nav justify-content-end">
+        <div class="col-1">
+          <button class="btnMode" id="btnMode" onclick="changeBgColorMode()">
+            DARK
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid title mt-3">
+      <div class="row space">
+        <div class="name col-lg-6 col-md-8 col-xs-12">ANYL FEBOE URIARTE</div>
+      </div>
+    </div>
+    <div class="container-fluid title">
+      <div class="row space">
+        <div
+          class="portfolio col-lg-6 col-md-8 col-xs-12"
+          id="portfolio"
+          data-value="PORTFOLIO"
+        >
+          PORTFOLIO &
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid title">
+      <div class="row space">
+        <div
+          class="projects col-lg-6 col-md-8 col-12"
+          id="projects"
+          data-value="PROJECTS"
+        >
+          PROJECTS
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid my-5">
+      <div class="row content pt-5">
+        <div class="col-lg-3 col-md-4 col-sm-6 lSide">
+          <a href="Project 1/project1.html"
+            ><button type="button" class="btn hov">1</button></a
+          >
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mid">
+          <a href="Project 2/Project2.html"
+            ><button type="button" class="btn">2</button></a
+          >
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 mid">
+          <a href="Project 3/project3.html"
+            ><button type="button" class="btn hov">3</button></a
+          >
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 midBot">
+          <a href="Project 4/project4.html"
+            ><button type="button" class="btn hov">4</button></a
+          >
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 rSide">
+          <a href="404view/construction.html"
+            ><button type="button" class="btn hov">?</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="row">
+        <div class="col-12 text-center my-4">
+          <div class="shape"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+      function triggerEffect(element) {
+        let iterations = 0;
+
+        const interval = setInterval(() => {
+          element.innerText = element.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iterations) {
+                return element.dataset.value[index];
+              }
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iterations >= element.dataset.value.length) {
+            clearInterval(interval);
+          }
+          iterations += 1 / 3;
+        }, 30);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const portfolioElement = document.getElementById("portfolio");
+        const projectsElement = document.getElementById("projects");
+
+        const elements = [portfolioElement, projectsElement];
+
+        elements.forEach((element) => {
+          if (element) {
+            element.dataset.value = element.innerText;
+            triggerEffect(element);
+
+            element.onmouseover = () => {
+              triggerEffect(element);
+            };
+          }
+        });
+      });
+
+      var bgColorMode = "light";
+      function changeBgColorMode() {
+        if (bgColorMode == "light") {
+          document.getElementById("body").setAttribute("data-bs-theme", "dark");
+          document.getElementById("btnMode").innerHTML = "Light Mode";
+          bgColorMode = "dark";
+        } else {
+          document
+            .getElementById("body")
+            .setAttribute("data-bs-theme", "light");
+          document.getElementById("btnMode").innerHTML = "Dark Mode";
+          bgColorMode = "light";
+        }
+      }
+    </script>
+  </body>
+</html>

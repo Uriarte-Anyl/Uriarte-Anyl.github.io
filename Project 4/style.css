@@ -1,12 +1,12 @@
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
   width: 100%;
 }
 
 [data-bs-theme="light"] {
-  --bs-body-bg: #0bda51;
+  --bs-body-bg: #08a63d;
 }
 
 [data-bs-theme="dark"] {
@@ -64,7 +64,7 @@ body {
 }
 
 .title {
-  font-size: 32px;
+  font-size: clamp(16px, 5vw, 23px);
   font-weight: bolder;
   text-align: center;
   margin-top: 0.9375rem;
