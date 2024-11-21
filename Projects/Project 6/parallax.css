@@ -1,0 +1,95 @@
+/* PARALLAX.CSS */
+/*CSS created by Christopher Jay De Claro*/
+/*github.com/cjdeclaro*/
+
+/*Key Art default settings*/
+
+.keyart,
+.keyart_layer {
+  height: 1000px;
+}
+
+.keyart {
+  position: relative;
+  z-index: 10;
+}
+
+.keyart_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+
+.keyart_layer.parallax {
+  position: fixed;
+}
+
+.main-content {
+  width: 100%;
+  position: absolute;
+  z-index: 200;
+  background: rgb(255, 255, 240);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(255, 255, 240, 1) 0%,
+    rgba(250, 240, 230, 1) 50%,
+    rgba(250, 235, 215, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(255, 255, 240, 1) 0%,
+    rgba(250, 240, 230, 1) 50%,
+    rgba(250, 235, 215, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 240, 1) 0%,
+    rgba(250, 240, 230, 1) 50%,
+    rgba(250, 235, 215, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fffff0",endColorstr="#faebd7",GradientType=1);
+}
+
+/*ADD OR REMOVE LAYERS AS NEEDED*/
+
+#keyart-0 {
+  background-image: url(image/pr0.png);
+}
+
+#keyart-1 {
+  background-image: url(image/pr1.png);
+}
+
+#keyart-2 {
+  background-image: url(image/pr2.png);
+}
+
+#keyart-3 {
+  background-image: url(image/pr3.png);
+}
+
+#keyart-4 {
+  background-image: url(image/pr4.png);
+}
+
+#keyart-5 {
+  background-image: url(image/pr5.png);
+}
+
+#keyart-6 {
+  background-image: url(image/pr6.png);
+}
+
+#keyart-7 {
+  background-image: url(image/pr7.png);
+}
+
+#keyart-8 {
+  background-image: url(image/pr8.png);
+}
+
+#keyart-scrim {
+  opacity: 0;
+}

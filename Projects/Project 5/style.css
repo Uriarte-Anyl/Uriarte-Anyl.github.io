@@ -1,0 +1,163 @@
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --clr-background: #1e201e;
+  --clr-fontHeading: #8b8e83;
+  --clr-fontParagraph: #c8baa5dd;
+  --clr-copyright: #e3d9c9dd;
+  --clr-fontSubheading: #727566;
+  --clr-btn: #687d62;
+  --clr-bgTitleColor: rgb(30, 32, 30);
+
+  --fs-heading: clamp(25px, 10%, 39.06px);
+  --fs-paragraph: 12.8px;
+  --fs-subheading: 20px;
+  --fs-copyright: 12.8px;
+}
+
+html,
+body {
+  overflow-x: clip;
+  margin: 0;
+  background-color: var(--clr-background);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.videoPlayer {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.videoHolder {
+  position: relative;
+  pointer-events: none;
+}
+
+.title {
+  width: clamp(150px, 45%, 600px);
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 25%;
+}
+
+.infoHolder {
+  margin-bottom: 48px;
+}
+
+.gameplayHolder {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+h6 {
+  color: var(--clr-fontHeading);
+  font-size: var(--fs-heading);
+  margin: 24px 0px 8px 0px;
+}
+
+h5 {
+  color: var(--clr-fontSubheading);
+  font-size: var(--fs-subheading);
+  font-weight: 800;
+  margin: 24px 0px 8px 0px;
+}
+
+p {
+  color: var(--clr-fontParagraph);
+  font-size: var(--fs-paragraph);
+  line-height: 19.5px;
+  max-width: 64ch;
+  word-spacing: 0.8px;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.link {
+  color: var(--clr-btn);
+}
+
+.copyright {
+  padding-top: 16px;
+  text-align: center;
+  color: var(--clr-copyright);
+  font-size: var(--fs-copyright);
+  line-height: 19.5px;
+}
+
+.copyrightFooter {
+  border-top: 1px solid var(--clr-copyright);
+}
+
+.depth1 {
+  background-image: url(images/pr1.jpg);
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.depth2 {
+  background-image: url(images/pr2.jpg);
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scroll {
+  height: 48px;
+  background-color: var(--clr-background);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-paragraph: 16px;
+    --fs-subheading: 25px;
+  }
+
+  p {
+    line-height: 24px;
+  }
+
+  .scroll {
+    height: 56px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --fs-paragraph: 25px;
+    --fs-subheading: 39.06px;
+  }
+
+  p {
+    line-height: 37.5px;
+    max-width: 76ch;
+  }
+
+  .gameplayHolder {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .scroll {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .depth1,
+  .depth2 {
+    background-attachment: scroll;
+  }
+}

@@ -1,0 +1,88 @@
+/*PUT YOUR CUSTOM STYLE HERE*/
+@font-face {
+  font-family: "Helvetica";
+  src: url("fonts/Helvetica.woff2") format("woff2"),
+    url("fonts/Helvetica.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("fonts/Helvetica-Bold.woff2") format("woff2"),
+    url("Helvetica-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --fc-paragraph: #322c2b;
+  --fc-neutral: #c59c9b;
+  --fc-subheading: #803d3b;
+
+  --fs-paragraph: 16px;
+  --fs-subheading: clamp(41.89px, 8%, 67.77px);
+}
+
+html,
+body {
+  font-family: "Helvetica" sans-serif;
+}
+
+.subheading {
+  font-size: var(--fs-subheading);
+  color: var(--fc-subheading);
+  font-weight: bold;
+}
+
+p {
+  font-size: var(--fs-paragraph);
+  color: var(--fc-paragraph);
+  max-width: 64ch;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.imgHolder {
+  width: 100%;
+  height: auto;
+}
+
+/*!This style is important, do not override!*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-paragraph: 16px;
+  }
+
+  p {
+    font-size: var(--fs-paragraph);
+    color: var(--fc-paragraph);
+    max-width: 72ch;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --fs-paragraph: 25.89px;
+  }
+
+  p {
+    font-size: var(--fs-paragraph);
+    color: var(--fc-paragraph);
+    max-width: 48ch;
+    line-height: 38.85px;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
