@@ -107,15 +107,15 @@ span {
 }
 
 .custom-cursor-1:hover {
-  cursor: url("resources/np_images/pencil-emoji.png") 16 16, auto;
+  cursor: url("Resources/np_images/pencil-emoji.png") 16 16, auto;
 }
 
 .custom-cursor-2:hover {
-  cursor: url("resources/np_images/design-emoji.png") 16 16, auto;
+  cursor: url("Resources/np_images/design-emoji.png") 16 16, auto;
 }
 
 .custom-cursor-3:hover {
-  cursor: url("resources/np_images/create-emoji.png") 16 16, auto;
+  cursor: url("Resources/np_images/create-emoji.png") 16 16, auto;
 }
 
 .line-container {
