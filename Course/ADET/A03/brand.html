@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>REBEL</title>
+    <link rel="icon" href="img/rebel_icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Han+Sans&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Libre+Barcode+128&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <style>
+    .exo-2-cta {
+      font-family: "Exo 2", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: bold;
+      font-style: normal;
+    }
+    .black-han-sans-bold {
+      font-family: "Black Han Sans", sans-serif;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .anonymous-pro-bold {
+      font-family: "Anonymous Pro", monospace;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    :root {
+      --primary-ff: "Black Han Sans", sans-serif;
+
+      --secondary-ff: "Exo 2", sans-serif;
+
+      --micro-ff: "Anonymous Pro", monospace;
+    }
+
+    body {
+      background-color: #100f15;
+    }
+
+    .navbar-nav {
+      width: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    a.nav-link {
+      font-family: var(--secondary-ff);
+      color: #831a16;
+      font-weight: bold;
+      font-size: var(--macro-fs);
+      text-decoration: none;
+      transition: background-size 0.5s;
+    }
+
+    a.nav-link:hover {
+      color: #124d4e;
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+
+    .box-holder {
+      margin: 0px 0px 40px 0px;
+    }
+
+    .box {
+      background: rgba(6, 43, 44, 0.72);
+      width: auto;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 8px;
+    }
+
+    .design-stuff img,
+    .box img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .box.mesh-gradient-03 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 32px;
+      background-color: hsla(1, 66%, 44%, 0.08);
+      background-image: radial-gradient(
+          at 0% 99%,
+          hsla(1, 100%, 30%, 0.08) 0px,
+          transparent 50%
+        ),
+        radial-gradient(
+          at 9% 13%,
+          hsla(181, 62%, 18%, 0.4) 0px,
+          transparent 50%
+        ),
+        radial-gradient(
+          at 98% 3%,
+          hsla(2, 100%, 30%, 0.08) 0px,
+          transparent 50%
+        ),
+        radial-gradient(
+          at 94% 92%,
+          hsla(181, 76%, 9%, 0.4) 0px,
+          transparent 50%
+        );
+    }
+
+    .description p {
+      padding: 16px 8px 0px 8px;
+      color: #831a16;
+      font-family: var(--micro-ff);
+      font-size: 14px;
+      max-width: 80ch;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-nav {
+        margin: 0px 16px 0px 16px;
+        width: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      .description p {
+        margin: 16px 124px 0px 124px;
+        color: #831a16;
+        font-family: var(--micro-ff);
+        font-size: 14px;
+        max-width: 56ch;
+      }
+    }
+
+    @media (max-width: 425px) {
+      .description p {
+        margin: 16px 4px 0px 4px;
+        color: #831a16;
+        font-family: var(--micro-ff);
+        font-size: 13.5px;
+        max-width: 64ch;
+      }
+    }
+  </style>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand fs-4" href=""
+          ><img src="resources/images/New_logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><img src="img/toggler_icon.png"
+          /></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header" style="background-color: #100f15">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <img src="img/btn_close_rebel.png" alt="" />
+            </button>
+          </div>
+          <div
+            class="offcanvas-body justify-content-center"
+            style="background-color: #100f15"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" type="button">Preview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html"
+                  ><img class="logo" src="img/rebel_logo.png" alt=""
+                /></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="brand.html">Brand</a>
+              </li>
+              <!-- <li class="nav-item">
+                  <a class="nav-link" href="">Personal</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">About</a>
+                </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 box mesh-gradient-03" style="height: 375px">
+          <img src="img/product_showcase.png" alt="" />
+        </div>
+        <div class="col-lg-6 description">
+          <p>
+            Hi, I present to you REBEL an imaginary brand created for bento grid
+            design. The brand's logo and assets are handcrafted by me, except
+            for the mockups. The mockups are generated in
+            <a
+              href="https://placeit.net/"
+              style="text-decoration: none"
+              target="_blank"
+              >Placeit.net</a
+            >. The idea and inspiration behind REBEL is to create a vibe out of
+            brutalist, urban, and cyberpunk themes.
+          </p>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 design-stuff" style="height: 260px">
+              <img src="img/design_rebel.png" alt="" />
+            </div>
+            <div class="col-lg-6 design-stuff" style="height: 260px">
+              <img src="img/rebel_graffiti.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-sm-12 col-lg-4 design-stuff py-5">
+          <img src="img/arachnid_show_design.png" alt="" />
+        </div>
+        <div class="col-sm-12 col-lg-4 design-stuff py-5">
+          <img src="img/heartbreak_showcase.png" alt="" />
+        </div>
+        <div class="col-sm-12 col-lg-4 design-stuff py-5">
+          <img src="img/dna_showcase.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

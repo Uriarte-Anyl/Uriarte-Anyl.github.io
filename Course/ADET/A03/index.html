@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>REBEL</title>
+    <link rel="icon" href="img/rebel_icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Han+Sans&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Libre+Barcode+128&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <style>
+      .exo-2-cta {
+        font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+      }
+      .black-han-sans-bold {
+        font-family: "Black Han Sans", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      .anonymous-pro-bold {
+        font-family: "Anonymous Pro", monospace;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .libre-barcode-128-regular {
+        font-family: "Libre Barcode 128", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      :root {
+        --primary-ff: "Black Han Sans", sans-serif;
+
+        --secondary-ff: "Exo 2", sans-serif;
+
+        --micro-ff: "Anonymous Pro", monospace;
+
+        --barcode-ff: "Libre Barcode 128", system-ui;
+      }
+
+      body {
+        background-color: #100f15;
+      }
+      .box {
+        background: rgba(6, 43, 44, 0.72);
+        width: auto;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 8px;
+      }
+
+      .box.info {
+        background: rgba(6, 43, 44, 0.72);
+        width: auto;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 8px;
+        padding: 8px 0px 8px 0px;
+      }
+
+      .box.mesh-gradient-01 {
+        padding: 8px 0px 8px 0px;
+        background-color: hsla(181, 57%, 28%, 0.24);
+        background-image: radial-gradient(
+            at 1% 2%,
+            hsla(1, 66%, 44%, 0.24) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 12% 86%,
+            hsla(181, 76%, 9%, 0.24) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 92% 15%,
+            hsla(181, 62%, 18%, 0.24) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 96%,
+            hsla(2, 71%, 30%, 0.24) 0px,
+            transparent 50%
+          );
+      }
+
+      .box.mesh-gradient-02 {
+        padding: 8px 0px 8px 0px;
+        background-color: hsla(1, 66%, 44%, 0.08);
+        background-image: radial-gradient(
+            at 0% 0%,
+            hsla(1, 100%, 30%, 0.08) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 5% 92%,
+            hsla(181, 62%, 18%, 0.4) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 99%,
+            hsla(2, 100%, 30%, 0.08) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 95% 7%,
+            hsla(181, 76%, 9%, 0.4) 0px,
+            transparent 50%
+          );
+      }
+
+      .box.mesh-gradient-03 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        background-color: hsla(1, 66%, 44%, 0.08);
+        background-image: radial-gradient(
+            at 0% 99%,
+            hsla(1, 100%, 30%, 0.08) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 9% 13%,
+            hsla(181, 62%, 18%, 0.4) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 98% 3%,
+            hsla(2, 100%, 30%, 0.08) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 94% 92%,
+            hsla(181, 76%, 9%, 0.4) 0px,
+            transparent 50%
+          );
+      }
+
+      .box.red-600 {
+        background: rgba(355, 45, 16, 0.04);
+        border: 1px solid rgb(131, 26, 22, 0.24);
+        padding: 8px 8px 8px 8px;
+      }
+
+      .box img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: 375px;
+      }
+
+      .box.dna img,
+      .box.red-600 img,
+      .box.mesh-gradient-03 img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .label {
+        color: #831a16;
+        font-family: var(--primary-ff);
+        font-size: clamp(20px, 5vw, 24px);
+        text-align: center;
+        letter-spacing: -2px;
+      }
+
+      .label-variation {
+        color: #831a16;
+        font-family: var(--primary-ff);
+        font-size: 48px;
+        text-align: center;
+        letter-spacing: -2px;
+      }
+
+      .cta {
+        padding-top: 12%;
+        color: #831a16;
+        font-family: var(--secondary-ff);
+        font-size: clamp(20px, 10vw, 32px);
+        font-weight: bold;
+        transition: 0.5s;
+      }
+
+      .cta:hover {
+        color: #124d4e;
+      }
+
+      .macro {
+        color: #831a16;
+        font-family: var(--secondary-ff);
+        font-size: clamp(12px, 5vw, 8px);
+        font-weight: bold;
+      }
+
+      .micro {
+        color: #1f7274;
+        font-family: var(--micro-ff);
+        font-size: clamp(12px, 5vw, 8px);
+      }
+
+      .micro-red {
+        color: #831a16;
+        font-family: var(--micro-ff);
+        font-size: clamp(12px, 5vw, 8px);
+      }
+
+      .barcode-red {
+        color: #831a16;
+        font-family: var(--barcode-ff);
+        font-size: clamp(4px, 2vw, 14px);
+      }
+
+      .desc {
+        margin-top: 14%;
+      }
+
+      .title-desc {
+        color: #831a16;
+        font-family: var(--secondary-ff);
+        font-size: clamp(13px, 5vw, 18px);
+        font-weight: 700;
+      }
+
+      .description p {
+        padding: 16px 8px 0px 8px;
+        color: #831a16;
+        font-family: var(--micro-ff);
+        font-size: 14px;
+      }
+
+      @media (max-width: 1199px) {
+        .box.mesh-gradient-02 {
+          margin-top: 24px;
+          padding: 8px 0px 8px 0px;
+          background-color: hsla(1, 66%, 44%, 0.08);
+          background-image: radial-gradient(
+              at 0% 0%,
+              hsla(1, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 5% 92%,
+              hsla(181, 62%, 18%, 0.4) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 100% 99%,
+              hsla(2, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 95% 7%,
+              hsla(181, 76%, 9%, 0.4) 0px,
+              transparent 50%
+            );
+        }
+        .box.mesh-gradient-03 {
+          margin-top: 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 32px;
+          background-color: hsla(1, 66%, 44%, 0.08);
+          background-image: radial-gradient(
+              at 0% 99%,
+              hsla(1, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 9% 13%,
+              hsla(181, 62%, 18%, 0.4) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 98% 3%,
+              hsla(2, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 94% 92%,
+              hsla(181, 76%, 9%, 0.4) 0px,
+              transparent 50%
+            );
+        }
+
+        .description p {
+          padding: 16px 8px 0px 8px;
+          color: #831a16;
+          font-family: var(--micro-ff);
+          font-size: 14px;
+          max-width: 48ch;
+          white-space: wrap;
+          margin: 0px 48px 0px 48px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .box.mesh-gradient-02 {
+          margin-top: 24px;
+          padding: 8px 0px 8px 0px;
+          background-color: hsla(1, 66%, 44%, 0.08);
+          background-image: radial-gradient(
+              at 0% 0%,
+              hsla(1, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 5% 92%,
+              hsla(181, 62%, 18%, 0.4) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 100% 99%,
+              hsla(2, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 95% 7%,
+              hsla(181, 76%, 9%, 0.4) 0px,
+              transparent 50%
+            );
+        }
+        .box.mesh-gradient-03 {
+          margin-top: 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 32px;
+          background-color: hsla(1, 66%, 44%, 0.08);
+          background-image: radial-gradient(
+              at 0% 99%,
+              hsla(1, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 9% 13%,
+              hsla(181, 62%, 18%, 0.4) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 98% 3%,
+              hsla(2, 100%, 30%, 0.08) 0px,
+              transparent 50%
+            ),
+            radial-gradient(
+              at 94% 92%,
+              hsla(181, 76%, 9%, 0.4) 0px,
+              transparent 50%
+            );
+        }
+
+        .description p {
+          padding: 16px 8px 0px 8px;
+          color: #831a16;
+          font-family: var(--micro-ff);
+          font-size: 14px;
+          max-width: 48ch;
+          white-space: wrap;
+          margin: 0px 48px 0px 48px;
+        }
+      }
+
+      @media (max-width: 766px) {
+        .box.info {
+          margin-top: 24px;
+          background: rgba(6, 43, 44, 0.72);
+          width: auto;
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          border-radius: 8px;
+          padding: 8px 0px 8px 0px;
+        }
+        .box.red-600.bot {
+          margin-top: 24px;
+          background: rgba(355, 45, 16, 0.04);
+          border: 1px solid rgb(131, 26, 22, 0.24);
+          padding: 8px 8px 8px 8px;
+        }
+        .description p {
+          padding: 16px 8px 0px 8px;
+          color: #831a16;
+          font-family: var(--micro-ff);
+          font-size: 14px;
+          max-width: 48ch;
+          white-space: wrap;
+          margin: 0px 24px 0px 24px;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="margin-top: 5%">
+    <div class="container" style="row-gap: 24px">
+      <div class="row mb-4">
+        <div class="col-md-6 col-xl-3">
+          <div class="box" style="height: 375px">
+            <img src="img/product_showcase.png" alt="White REBEL Jacket" />
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="box info mb-3" style="height: 200px">
+            <div class="row text-center">
+              <div class="col-4"><div class="micro-red">shut it</div></div>
+              <div class="col-4"><div class="label">REBEL</div></div>
+              <div class="col-4"><div class="micro-red">on top</div></div>
+            </div>
+
+            <div class="row text-center">
+              <a style="text-decoration: none" href="product.html"
+                ><div class="cta">WEAR THE VIBE→</div></a
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-xl-6">
+              <div class="box red-600" style="height: 160px">
+                <img src="img/arachnid_logo_sm.png" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-6">
+              <div class="box red-600 bot" style="height: 160px">
+                <img src="img/rebel_gif.gif" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-xl-5">
+          <div class="box mesh-gradient-03" style="height: 375px">
+            <div class="row text-center">
+              <div class="col-4 micro">ALWAYS</div>
+              <div class="col-4 macro">REBEL</div>
+              <div class="col-4 micro">PEOPLE</div>
+            </div>
+            <img src="img/rebel_logo.png" alt="" />
+            <div class="row text-center">
+              <div class="col-4 micro">PEOPLE</div>
+              <div class="col-4 macro">REBEL</div>
+              <div class="col-4 micro">ALWAYS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-xl-5">
+          <div class="box mesh-gradient-01" style="height: 320px">
+            <div class="row text-center">
+              <div class="col-4"><p class="barcode-red">DAMN.</p></div>
+              <div class="col-4">
+                <p class="barcode-red">THE DEVIL WEARS IT WHO DOESNT?</p>
+              </div>
+              <div class="col-4"><p class="barcode-red">DAMN.</p></div>
+            </div>
+            <div class="row text-center desc">
+              <div class="col-12 title-desc">
+                THE DEVIL ALSO WEARS IT, WHO DOESNT?
+              </div>
+              <div class="col-12 description">
+                <p>
+                  "Be mad, be chaotic, be bold. What are rules, laws,
+                  compliance, glorification, anti-creativity, and formalities?
+                  We always rebel."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-2">
+          <div class="box info dna" style="height: 320px">
+            <div class="row text-center">
+              <div class="col micro mb-3">it runs in the blood.</div>
+            </div>
+            <img src="img/dna_gif.gif" alt="dna" />
+          </div>
+        </div>
+        <div class="col-md-12 col-xl-5">
+          <div class="box mesh-gradient-02" style="height: 320px">
+            <div class="row text-center">
+              <div class="col-4"><p class="micro-red">rebel</p></div>
+              <div class="col-4"><p class="micro-red">--</p></div>
+              <div class="col-4"><p class="micro-red">2025 ©</p></div>
+            </div>
+            <div class="row text-center">
+              <div class="col-12"><p class="label-variation">REBEL</p></div>
+              <div class="col-12"><p class="label-variation">REBEL</p></div>
+              <div class="col-12">
+                <p class="label-variation">REBEL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
