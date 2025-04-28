@@ -134,8 +134,7 @@
 
     @media (max-width: 768px) {
       .navbar-nav {
-        margin: 0px 16px 0px 16px;
-        width: 320px;
+        width: auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -151,6 +150,13 @@
     }
 
     @media (max-width: 425px) {
+      .navbar-nav {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
       .description p {
         margin: 16px 4px 0px 4px;
         color: #831a16;
