@@ -16,7 +16,7 @@ const products = [
         name: "Medium Espresso",
         code: "BC-MDE",
         size: "8oz",
-        price: 75,
+        price: 149,
         image: "espresso.png",
       },
       {
@@ -24,7 +24,7 @@ const products = [
         name: "Large Espresso",
         code: "BC-LE",
         size: "6oz",
-        price: 75,
+        price: 189,
         image: "espresso.png",
       },
       {
@@ -40,7 +40,7 @@ const products = [
         name: "Medium Americano",
         code: "BC-MDA",
         size: "8oz",
-        price: 75,
+        price: 149,
         image: "americano.png",
       },
       {
@@ -48,7 +48,7 @@ const products = [
         name: "Large Americano",
         code: "BC-LA",
         size: "6oz",
-        price: 75,
+        price: 189,
         image: "americano.png",
       },
       {
@@ -56,7 +56,7 @@ const products = [
         name: "Small Cappucino",
         code: "BC-SMC",
         size: "6oz",
-        price: 75,
+        price: 89,
         image: "cappucino.png",
       },
       {
@@ -64,7 +64,7 @@ const products = [
         name: "Medium Cappucino",
         code: "BC-MDC",
         size: "6oz",
-        price: 75,
+        price: 179,
         image: "cappucino.png",
       },
       {
@@ -72,7 +72,7 @@ const products = [
         name: "Large Cappucino",
         code: "BC-LC",
         size: "6oz",
-        price: 75,
+        price: 209,
         image: "cappucino.png",
       },
       {
@@ -80,7 +80,7 @@ const products = [
         name: "Small Latte",
         code: "C-SML",
         size: "6oz",
-        price: 75,
+        price: 89,
         image: "latte.png",
       },
       {
@@ -88,7 +88,7 @@ const products = [
         name: "Medium Latte",
         code: "BC-MDL",
         size: "6oz",
-        price: 75,
+        price: 179,
         image: "latte.png",
       },
       {
@@ -96,7 +96,7 @@ const products = [
         name: "Large Latte",
         code: "BC-LL",
         size: "6oz",
-        price: 75,
+        price: 209,
         image: "latte.png",
       },
       {
@@ -104,7 +104,7 @@ const products = [
         name: "Small Drip",
         code: "BC-SMD",
         size: "6oz",
-        price: 75,
+        price: 69,
         image: "drip.png",
       },
       {
@@ -112,7 +112,7 @@ const products = [
         name: "Medium Drip",
         code: "BC-MDD",
         size: "6oz",
-        price: 75,
+        price: 89,
         image: "drip.png",
       },
       {
@@ -120,7 +120,7 @@ const products = [
         name: "Large Drip",
         code: "BC-LD",
         size: "6oz",
-        price: 75,
+        price: 159,
         image: "drip.png",
       },
     ],
@@ -132,7 +132,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Small Iced Coffee",
-        price: 75,
+        price: 79,
         code: "BC-SMIC",
         size: "8oz",
         image: "ice_coffee.png",
@@ -140,7 +140,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Medium Iced Coffee",
-        price: 75,
+        price: 159,
         code: "BC-MDIC",
         size: "12oz",
         image: "ice_coffee.png",
@@ -148,7 +148,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Large Iced Coffee",
-        price: 75,
+        price: 209,
         code: "BC-LIC",
         size: "22oz",
         image: "ice_coffee.png",
@@ -156,7 +156,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Small Cold Brew",
-        price: 75,
+        price: 69,
         code: "BC-SMCB",
         size: "8oz",
         image: "cold_brew.png",
@@ -164,7 +164,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Medium Cold Brew",
-        price: 75,
+        price: 139,
         code: "BC-MDCB",
         size: "12oz",
         image: "cold_brew.png",
@@ -172,7 +172,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Large Cold Brew",
-        price: 75,
+        price: 179,
         code: "BC-LCB",
         size: "22oz",
         image: "cold_brew.png",
@@ -180,7 +180,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Small Iced Espresso",
-        price: 75,
+        price: 89,
         code: "BC-SMIE",
         size: "8oz",
         image: "ice_espresso.png",
@@ -188,7 +188,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Medium Iced Espresso",
-        price: 75,
+        price: 179,
         code: "BC-MDIE",
         size: "12oz",
         image: "ice_espresso.png",
@@ -196,7 +196,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Large Iced Espresso",
-        price: 75,
+        price: 209,
         code: "BC-LIE",
         size: "22oz",
         image: "ice_espresso.png",
@@ -204,7 +204,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Small Iced Caffè Americano",
-        price: 75,
+        price: 89,
         code: "BC-SMICA",
         size: "8oz",
         image: "ice_caffe_americano.png",
@@ -212,7 +212,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Medium Iced Caffè Americano",
-        price: 75,
+        price: 159,
         code: "BC-MDICA",
         size: "12oz",
         image: "ice_caffe_americano.png",
@@ -220,7 +220,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Large Iced Caffè Americano",
-        price: 75,
+        price: 209,
         code: "BC-LICA",
         size: "22oz",
         image: "ice_caffe_americano.png",
@@ -228,7 +228,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Small Iced Latte",
-        price: 75,
+        price: 89,
         code: "BC-SMIL",
         size: "8oz",
         image: "ice_latte.png",
@@ -236,7 +236,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Medium Iced Latte",
-        price: 75,
+        price: 159,
         code: "BC-MDIL",
         size: "12oz",
         image: "ice_latte.png",
@@ -244,7 +244,7 @@ const products = [
       {
         isAvailable: "true",
         name: "Large Iced Latte",
-        price: 75,
+        price: 209,
         code: "BC-LIL",
         size: "22oz",
         image: "ice_latte.png",
