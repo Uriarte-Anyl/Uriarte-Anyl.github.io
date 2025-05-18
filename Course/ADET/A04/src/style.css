@@ -132,7 +132,7 @@ body {
   position: relative;
   overflow-y: scroll;
   border-radius: 4px;
-  height: 90.3dvh;
+  height: 90.6dvh;
   background-color: #faf9f6;
 }
 
@@ -229,6 +229,11 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.modal-content {
+  background-color: #f9fbff;
+  background-image: url("https://www.transparenttextures.com/patterns/rice-paper.png");
 }
 
 .modal-body {
@@ -358,4 +363,25 @@ body {
     max-width: 160px;
     width: 64px;
   }
+}
+@media (width: 1024px) {
+  .btn.btn-primary.place-order {
+    width: 100%;
+    background-color: #926262;
+    border: 1px solid #ddd2d2;
+    border-radius: 4px;
+    color: #faf9f6;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    font-size: 11px;
+  }
+
+  .total-area {
+  position: sticky;
+  bottom: 0;
+  margin-top: 63vh;
+  height: 27.3vh;
+  display: flex;
+  background-color: #f1f1f1;
+}
 }
