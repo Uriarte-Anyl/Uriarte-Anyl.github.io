@@ -2,7 +2,7 @@ var categories = [];
 var products = [];
 
 const getAllCategories = async () => {
-  fetch("http://localhost/FT/ADET/A04/categories.php")
+  fetch("http://localhost/FT/WebProjects/Uriarte-Anyl.github.io/Course/ADET/ADET-BE/A06-API/categories.php")
     .then((response) => response.json())
     .then((data) => {
       categories = data;
@@ -15,7 +15,7 @@ const getAllProducts = async (categoryID) => {
     categoryID: categoryID,
   };
 
-  fetch("http://localhost/FT/ADET/A04/products.php", {
+  fetch("http://localhost/FT/WebProjects/Uriarte-Anyl.github.io/Course/ADET/ADET-BE/A06-API/products.php", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
