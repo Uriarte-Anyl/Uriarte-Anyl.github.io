@@ -16,116 +16,48 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-
-  <style>
-    .domine-header {
-      font-family: "Domine", serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
-    .roboto-subheader {
-      font-family: "Roboto", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 500;
-      font-style: normal;
-      font-variation-settings: "wdth" 100;
-    }
-
-    .quicksand-contents {
-      font-family: "Quicksand", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-      max-height: 80vh;
-    }
-
-    .icon {
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .icon span {
-      color: #537d5d;
-    }
-
-    .line {
-      height: 100%;
-      width: 0.5px;
-      border-left: 1px solid black;
-    }
-
-    .items-wrapper {
-      font-family: "Roboto", sans-serif;
-    }
-
-    .header {
-      width: 26ch;
-      font-family: "Domine", serif;
-      font-size: 48px;
-    }
-
-    .sub-contents-wrapper {
-      font-family: "Roboto", sans-serif;
-      font-size: 16px;
-    }
-
-    .content {
-      font-family: "Quicksand", sans-serif;
-      font-size: 16px;
-      width: clamp(90%, 60ch, 80ch);
-      line-height: 1.6;
-    }
-
-    .category {
-      color: #537d5d;
-    }
-
-    .card {
-      height: 160px;
-      width: 100%;
-      box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
-        0 15px 40px rgba(166, 173, 201, 0.2);
-      border: none;
-    }
-
-    .lyrics {
-      font-family: "Quicksand", sans-serif;
-      font-size: 1rem;
-      white-space: pre-wrap;
-      line-height: 1.6;
-    }
-
-    .frame{
-      width: 100%;
-      height: 600px;
-    }
-  </style>
 
   <body>
     <div class="container-fluid my-4">
       <div class="row">
-        <div class="col d-flex flex-row align-center justify-content-around">
+        <div
+          class="col d-flex flex-row align-items-center justify-content-between justify-content-lg-around"
+        >
           <div class="item-icon-wrapper d-flex flex-row align-center">
             <div class="icon pe-3"><span>STB</span>LOG</div>
             <div class="line px-1"></div>
-            <div class="items-wrapper d-flex flex-row align-center">
+            <div
+              class="items-wrapper d-none d-lg-flex flex-row align-items-center"
+            >
               <div class="item px-2 py-1">News</div>
               <div class="item px-2 py-1">Stories</div>
               <div class="item px-2 py-1">Community</div>
               <div class="item px-2 py-1">Subscribe</div>
             </div>
           </div>
-          <div class="items-wrapper d-flex flex-row align-center">
+          <div
+            class="toggle-button-wrapped d-flex d-lg-none align-items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="items-wrapper d-none d-lg-flex flex-row align-items-center"
+          >
             <div class="item-write-wrapper d-flex flex-row align-center px-3">
               <div class="write-icon py-1 px-1">
                 <svg
@@ -182,15 +114,17 @@
       </div>
     </div>
 
-    <div class="container mt-5 position-relative">
+    <div class="container mt-5">
       <div class="row">
-        <div class="col-sm-12 col-md-9">
+        <div class="col-sm-12 col-md-9 col-lg-9">
           <!-- CONTENT -->
 
           <!-- TITLE AND SUBCONTENTS -->
           <div class="header py-2">JISUN TITUM ALJURED</div>
-          <div class="sub-contents-wrapper d-flex flex-row align-center">
-            <div class="author-date-wrapper d-flex flex-row pe-5">
+          <div class="sub-contents-wrapper d-flex flex-row align-items-center">
+            <div
+              class="author-date-wrapper d-flex flex-row pe-2 pe-sm-3 pe-lg-5"
+            >
               <div class="author pe-2">Research by Wembanyama</div>
               <div class="date">Tues June 06, 2025</div>
             </div>
@@ -204,7 +138,7 @@
           <!-- END OF TITLE AND SUBCONTENTS -->
 
           <!-- BODY -->
-          <div class="content py-4">
+          <div class="content py-5">
             malaking ipikto sa boston siltiks 🤯ang pagkawala ni jison titum😞,
             sa kanilang layn-ap😟😟, dahil sa gem seks natalo sila sa noyork
             niks🥺🥺✋️, kung kumakailan si jison titum nagkaroon ng indyure🤯🤯
@@ -224,8 +158,10 @@
 
           <!-- TITLE AND SUBCONTENTS -->
           <div class="header py-2">IN-HEAT NA LAHAT</div>
-          <div class="sub-contents-wrapper d-flex flex-row align-center">
-            <div class="author-date-wrapper d-flex flex-row pe-5">
+          <div class="sub-contents-wrapper d-flex flex-row align-items-center">
+            <div
+              class="author-date-wrapper d-flex flex-row pe-2 pe-sm-3 pe-lg-5"
+            >
               <div class="author pe-2">UV INDEX FOR STO.TOMAS, BATANGAS</div>
               <div class="date">Tues June 06, 2025</div>
             </div>
@@ -240,15 +176,18 @@
 
           <!-- BODY -->
           <div class="content py-4">
-            <iframe class="frame"
+            <iframe
+              class="frame"
               src="https://Uriarte-Anyl.github.io/Course/ADET/A07/embed.html"
             ></iframe>
           </div>
           <!-- END OF BODY -->
 
           <div class="header py-2">10:00 PM NA, KAYA PALA ANG SAKIT NA</div>
-          <div class="sub-contents-wrapper d-flex flex-row align-center">
-            <div class="author-date-wrapper d-flex flex-row pe-5">
+          <div class="sub-contents-wrapper d-flex flex-row align-items-center">
+            <div
+              class="author-date-wrapper d-flex flex-row pe-2 pe-sm-3 pe-lg-5"
+            >
               <div class="author pe-2">Analysis by Anyl Feboe Uriarte</div>
               <div class="date">Tues June 06, 2025</div>
             </div>
@@ -308,9 +247,9 @@ Haplos mo'y ramdam pa rin sa dilim (hindi na ba ma-mamamayapa?)
           >
           <!--END OF CONTENT -->
         </div>
-        <div class="col-12 col-lg-3 position-relative">
+        <div class="col-sm-12 col-lg-3 position-relative col-none">
           <div
-            class="card-wrapper pt-2 position-sticky top-0 position-sm-absolute end-0"
+            class="card-wrapper pt-2 position-sticky top-0"
             style="width: 100%; max-width: 300px"
           >
             <div class="card my-4">1</div>
