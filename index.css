@@ -88,7 +88,7 @@ span {
   grid-template-areas:
     "mvc capstone bento"
     "api capstone pos";
-  gap: 1.5rem;
+  gap: 1.4rem;
   padding: 0;
 }
 
@@ -105,9 +105,8 @@ span {
 
 /* Media wrapper so we can control height like the screenshot */
 .tile-media{
-  border-radius: 2px;
   overflow: hidden;
-  background: #111;
+  box-shadow: 0px 4px 12px hsl(0, 0%, 4%);
 }
 
 .tile-media img{
