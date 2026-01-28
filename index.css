@@ -1,0 +1,101 @@
+/* embedded google font  */
+
+.ibm-plex-sans {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+:root {
+  /* fonts */
+  --font-lg-32px: 400 32px "IBM Plex Sans", sans-serif;
+  --font-lg-20px: 400 20px "IBM Plex Sans", sans-serif;
+
+  --font-bold-14px: 800 14px "IBM Plex Sans", sans-serif;
+  --font-semi-14px: 700 14px "IBM Plex Sans", sans-serif;
+  --font-md-14px: 600 14px "IBM Plex Sans", sans-serif;
+  --font-md-8px: 600 8px "IBM Plex Sans", sans-serif;
+
+  --font-reg-14px: 400 14px "IBM Plex Sans", sans-serif;
+  --font-reg-10px: 400 10px "IBM Plex Sans", sans-serif;
+
+  --font-light-12px: 300 12px "IBM Plex Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 7%);
+  color: hsl(0, 0%, 90%);
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  font: var(--font-semi-14px);
+  background-color: hsl(0, 0%, 7%);
+}
+
+.section-header {
+  font: var(--font-light-12px);
+  letter-spacing: 0.4px;
+}
+
+.about {
+  font: var(--font-reg-14px);
+}
+
+.offer {
+  font: var(--font-reg-14px);
+}
+
+.item-title {
+  a {
+    text-decoration: none;
+    cursor: default;
+    color: hsl(0, 0%, 90%);;
+  }
+
+  sup{
+    background-color: hsl(30, 85%, 65%);
+    color: hsl(0, 0%, 7%);
+    font: var(--font-md-8px);
+  }
+}
+
+span {
+  font: var(--font-reg-10px);
+  color: hsl(30, 85%, 65%);
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper{
+  margin-bottom: 1.5em;
+}
+
+.preview-title {
+  font: var(--font-med-14px);
+
+  .small-title{
+    font: var(--font-light-12px);
+    letter-spacing: 0.4px;
+    color: hsl(0, 0%, 72%);
+  }
+}
+
+.masonry {
+  columns: 400px;
+}
+
+/* interactions */
+
+.item-title:hover {
+  a {
+    color: hsl(0, 0%, 72%);
+  }
+
+  sup{
+    background-color: hsl(30, 85%, 56%);
+  }
+}
