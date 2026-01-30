@@ -217,21 +217,7 @@ span {
   align-items: flex-start;
 }
 
-/* bracket base for headers */
-.project-header,
-.section-header {
-  position: relative;
-  display: inline-block;
-  letter-spacing: 0.05em;
-  user-select: none;
-  padding-inline: 0.9em;
-  /* bracket rails */
-  line-height: 1.2;
-}
-
 /* shared pseudo base */
-.project-header::before,
-.project-header::after,
 .small-title::before,
 .small-title::after {
   position: absolute;
@@ -244,7 +230,6 @@ span {
 }
 
 /* left bracket */
-.project-header::before,
 .small-title::before {
   content: "[";
   left: 0.25em;
@@ -252,18 +237,17 @@ span {
 }
 
 /* right bracket */
-.project-header::after,
 .small-title::after {
   content: "]";
   right: 0.25em;
   transform: translate(0.35em, -50%);
 }
 
-/* show brackets when TILE is hovered */
-.tile:hover .project-header::before,
-.tile:hover .project-header::after,
+/* show brackets only for SMALL TITLE when TILE or TEXT is hovered */
 .tile:hover .small-title::before,
-.tile:hover .small-title::after {
+.tile:hover .small-title::after,
+.small-title:hover::before,
+.small-title:hover::after {
   opacity: 1;
   transform: translate(0, -50%);
 }
