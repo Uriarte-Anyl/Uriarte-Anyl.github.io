@@ -99,7 +99,7 @@ span {
   /* reserved rails */
   line-height: 1.2;
 
-  /* IMPORTANT: prevent flex stretch so brackets hug text */
+  /*prevent flex stretch so brackets hug text */
   width: fit-content;
   align-self: flex-start;
 }
@@ -212,7 +212,7 @@ span {
   color: var(--yellow-100);
 }
 
-/* IMPORTANT: prevent flex children from stretching */
+/* prevent flex children from stretching */
 .preview-title {
   align-items: flex-start;
 }
@@ -232,8 +232,6 @@ span {
 /* shared pseudo base */
 .project-header::before,
 .project-header::after,
-.section-header::before,
-.section-header::after,
 .small-title::before,
 .small-title::after {
   position: absolute;
@@ -247,7 +245,6 @@ span {
 
 /* left bracket */
 .project-header::before,
-.section-header::before,
 .small-title::before {
   content: "[";
   left: 0.25em;
@@ -256,7 +253,6 @@ span {
 
 /* right bracket */
 .project-header::after,
-.section-header::after,
 .small-title::after {
   content: "]";
   right: 0.25em;
@@ -266,8 +262,6 @@ span {
 /* show brackets when TILE is hovered */
 .tile:hover .project-header::before,
 .tile:hover .project-header::after,
-.tile:hover .section-header::before,
-.tile:hover .section-header::after,
 .tile:hover .small-title::before,
 .tile:hover .small-title::after {
   opacity: 1;
