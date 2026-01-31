@@ -71,7 +71,7 @@ body {
   font-size: clamp(0.5625rem, 0.53rem + 0.15vw, 0.625rem);
 }
 
-.link-holder a {
+.link-holder a, .school {
   text-decoration: underline dotted var(--yellow-100);
   color: var(--light);
   transition: color 0.25s ease;
@@ -87,7 +87,7 @@ span {
 }
 
 .small-title {
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   color: var(--light);
   font-size: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);
   font-weight: 300;
@@ -208,7 +208,7 @@ span {
   background-color: hsl(30, 85%, 56%);
 }
 
-.link-holder>div:hover a {
+.link-holder>div:hover a, .school:hover {
   color: var(--yellow-100);
 }
 
