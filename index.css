@@ -7,8 +7,10 @@
 
 :root {
   /* font */
-  --ibm: "IBM Plex Sans", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ibm:
+    "IBM Plex Sans", sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
 
   /* colors */
   --dark: hsl(0, 0%, 7%);
@@ -57,7 +59,6 @@ body {
   color: var(--light-200);
 }
 
-/* plain CSS equivalents (avoid nesting unless you're using SCSS) */
 .item-title a {
   text-decoration: none;
   color: var(--light);
@@ -71,7 +72,8 @@ body {
   font-size: clamp(0.5625rem, 0.53rem + 0.15vw, 0.625rem);
 }
 
-.link-holder a, .school {
+.link-holder a,
+.school {
   text-decoration: underline dotted var(--yellow-100);
   color: var(--light);
   transition: color 0.25s ease;
@@ -163,9 +165,9 @@ span {
   pointer-events: none;
 }
 
-.tile:hover .tile-media::after {
+/* .tile:hover .tile-media::after {
   opacity: 1;
-}
+} */
 
 .tile-media img {
   width: 100%;
@@ -175,9 +177,9 @@ span {
   transition: transform 0.6s var(--fast-start-easing);
 }
 
-.tile:hover .tile-media img {
+/* .tile:hover .tile-media img {
   transform: scale(1.02);
-}
+} */
 
 /* per-tile media heights */
 .tile-mvc,
@@ -208,7 +210,8 @@ span {
   background-color: hsl(30, 85%, 56%);
 }
 
-.link-holder>div:hover a, .school:hover {
+.link-holder > div:hover a,
+.school:hover {
   color: var(--yellow-100);
 }
 
@@ -223,7 +226,8 @@ span {
   position: absolute;
   top: 50%;
   opacity: 0;
-  transition: opacity 0.6s var(--fast-start-easing),
+  transition:
+    opacity 0.6s var(--fast-start-easing),
     transform 0.6s var(--fast-start-easing);
   color: #888;
   transform: translateY(-50%);
@@ -244,13 +248,13 @@ span {
 }
 
 /* show brackets only for SMALL TITLE when TILE or TEXT is hovered */
-.tile:hover .small-title::before,
+/* .tile:hover .small-title::before,
 .tile:hover .small-title::after,
 .small-title:hover::before,
 .small-title:hover::after {
   opacity: 1;
   transform: translate(0, -50%);
-}
+} */
 
 /* responsive media height */
 .tile .tile-media {
