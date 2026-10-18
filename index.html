@@ -2,218 +2,234 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Uriarte Anyl — Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="img/portfolio_logo_ver1.svg" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+    <title>Anyl Uriarte — Portfolio</title>
+
+    <!-- Connections and preloads -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="preload"
+      href="assets/images/background.jpg"
+      as="image"
+      fetchpriority="high"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Styles: framework first, own styles last so they win ties -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div class="container-fluid top-nav p-0 m-0 sticky-top">
-      <div class="row mx-3 py-3 px-0 border-bottom border-dark border-1">
-        <div class="col-lg-5 col-5 ps-0">Anyl Feboe Uriarte</div>
-        <div class="col-lg-3 col-7">BS - Information Technology</div>
-        <div class="col-lg-4 d-none d-lg-block d-xl-block">Batangas, PH</div>
-      </div>
-    </div>
+    <!-- Icon sprite: each icon is defined once and reused with <use> -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="0"
+      height="0"
+      style="position: absolute"
+      aria-hidden="true"
+    >
+      <symbol id="icon-email" viewBox="0 0 16 16">
+        <path
+          d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+        />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 16 16">
+        <path
+          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+        />
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 16 16">
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+        />
+      </symbol>
+      <symbol id="icon-x" viewBox="0 0 16 16">
+        <path
+          d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+        />
+      </symbol>
+    </svg>
 
-    <div class="container-fluid p-0 mx-0 my-2">
-      <div class="row mx-3 py-3 px-0">
-        <div class="col-lg-5 col-12 ps-0 pe-lg-5 pe-1">
-          <div class="section-header text-secondary p-0">ABOUT ME</div>
-          <div class="about lh-md mt-2">
-            I am a BS Information Technology student at the
-            <a href="https://pupstc.github.io/" target="_blank" class="school"
-              >Polytechnic University of the Philippines Sto. Tomas<sup
-                class="ne-arrow"
-                >&#8599;</sup
-              ></a
+    <!-- Page shell: full-height column so the footer can sit at the bottom -->
+    <div class="container-fluid overlay min-dvh-100 d-flex flex-column">
+      <main class="row justify-content-center flex-grow-1">
+        <!-- Content column: everything inside shares one width -->
+        <div class="xl:col-5 lg:col-10 md:col-10 sm:col-10 d-flex flex-column">
+          <!-- Profile -->
+          <section class="content mt-10" aria-labelledby="profile-name">
+            <div
+              class="d-flex flex-row justify-content-between align-items-center"
             >
-            with a genuine interest in exploring different areas of technology.
-            I enjoy designing and developing functional websites that solve real
-            life problems while remaining simple and easy to use. I believe good
-            technology should feel clear, intuitive, and helpful to the people
-            who use it. In the future, I hope to create applications that make
-            meaningful impact, whether within my local community or on a broader
-            scale, while continuing to improve my skills.
-          </div>
-        </div>
-        <div class="col-lg-3 col-7 ps-lg-2 ps-0 mt-lg-0 mt-4">
-          <div class="section-header text-secondary p-0">WHAT I OFFER</div>
-          <div class="offer mt-2">
-            <div class="item-holder">
-              <div class="item-title">
-                <a
-                  href="#"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="right"
-                  data-bs-title="Currently I use HTML/CSS and javascript in front end while PHP is my go to for the back-end."
-                  >Web Development <sup class="px-1 rounded-1">i</sup></a
-                >
-              </div>
-              <div class="span-holder mt-1 d-flex flex-row gap-1">
-                <span>HTML/CSS,</span>
-                <span>JS,</span>
-                <span>PHP,</span>
-                <span>MYSQL</span>
-              </div>
-            </div>
-            <div class="item-holder mt-2">
-              <div class="item-title">
-                <a
-                  href="#"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="right"
-                  data-bs-title="I am interested in AI and look forward to integrating it into websites in the future."
-                  >Artificial Intelligence
-                  <sup class="px-1 rounded-1">i</sup></a
-                >
-              </div>
-              <div class="span-holder mt-1 d-flex flex-row gap-1">
-                <span>CONDA,</span>
-                <span>JUPYTER NOTEBOOK</span>
-              </div>
-            </div>
-            <div class="item-holder mt-2">
-              <div class="item-title">
-                <a
-                  href="#"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="right"
-                  data-bs-title="I am a creative person and I love designing simple yet interactive components."
-                  >UI/UX &amp; Product Design
-                  <sup class="px-1 rounded-1">i</sup></a
-                >
-              </div>
-              <div class="span-holder mt-1 d-flex flex-row gap-1">
-                <span>FIGMA,</span>
-                <span>CANVA,</span>
-                <span>ADOBE CREATIVE CLOUD</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-5 ps-lg-2 ps-0 mt-lg-0 mt-4">
-          <div class="section-header text-secondary p-0">SOCIAL LINKS</div>
-          <div class="link-holder d-flex flex-column gap-2 mt-2">
-            <div class="link-1">
-              <a href="https://github.com/Uriarte-Anyl" target="_blank">
-                Github <sup class="ne-arrow">&#8599;</sup>
-              </a>
-            </div>
+              <div class="d-flex flex-row align-items-center">
+                <span class="avatar ps-2">
+                  <img
+                    class="avatar avatar-lg"
+                    src="assets/images/custom-profilepic-ascii.png"
+                    alt="Profile picture of Anyl Uriarte"
+                  />
+                </span>
 
-            <div class="link-2">
-              <a
-                href="https://www.linkedin.com/in/uriarte-anyl/"
-                target="_blank"
+                <div class="ms-5">
+                  <h1
+                    id="profile-name"
+                    class="mb-0 ibm-plex-sans-condensed fs-sm fg-black fw-700"
+                  >
+                    Anyl Uriarte
+                  </h1>
+                  <!-- <div class="d-flex flex-row align-items-center space-x-1">
+                    <p class="mb-0 ibm-plex-serif fs-xxs fg-3">
+                      solutions architect @
+                    </p>
+                    <i class="bi bi-nvidia fs-xs" style="color: #76b900"></i>
+                  </div> -->
+                  <!-- <div
+                    class="d-flex flex-row align-items-center space-x-1 fg-3"
+                  >
+                    <p class="mb-0 ibm-plex-serif fs-xxs">
+                      software engineer @
+                    </p>
+                    <i class="bi bi-github fs-xs fg-black"></i>
+                  </div> -->
+                  <!-- <p class="mb-0 ibm-plex-serif fs-xxs fg-3">
+                    associate consultant @ 👁️🐝Ⓜ️
+                  </p> -->
+                  <p class="mb-0 ibm-plex-serif fs-xxs fg-2">
+                    upskilling/unemployed @
+                    <i class="bi bi-house-fill"></i>
+                  </p>
+                </div>
+              </div>
+              <p
+                class="pe-7 pt-1 ibm-plex-sans-condensed fs-xxs fg-black fw-700"
               >
-                LinkedIn <sup class="ne-arrow">&#8599;</sup>
-              </a>
+                PH
+              </p>
             </div>
 
-            <div class="link-3">
-              <a href="mailto:uriarteanylfeboe@gmail.com" target="_blank">
-                Gmail <sup class="ne-arrow">&#8599;</sup>
-              </a>
-            </div>
+            <p class="mt-5 text-wrap ibm-plex-serif fs-xs fg-black">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since 1966, when designers at Letraset and James Mosley, the
+            </p>
+          </section>
 
-            <div class="link-4">
-              <a href="src/docs/Resume_Uriarte_Anyl_Feboe.pdf" target="_blank">
-                CV <sup class="ne-arrow">&#8599;</sup>
+          <!-- Current activity -->
+          <section class="content mt-32" aria-labelledby="activity-title">
+            <h2
+              id="activity-title"
+              class="mb-0 ibm-plex-sans-condensed fs-xs fg-2 fw-600"
+            >
+              What I’ve been up to
+            </h2>
+            <p class="text-wrap ibm-plex-serif fs-xs fg-black">
+              Taking Harvard's CS50 course, solving LeetCode problems
+              occassionally, and working on personal projects.
+            </p>
+          </section>
+
+          <!-- Projects: cards are rendered into #projectContainer by script.js -->
+          <section class="mt-12" aria-labelledby="projects-title">
+            <h2
+              id="projects-title"
+              class="text-center ibm-plex-sans-condensed fs-xs fg-black fw-700"
+            >
+              $ Notable projects
+            </h2>
+
+            <div class="row mt-2 g-7" id="projectContainer"></div>
+          </section>
+
+          <!-- Footer: mt-auto pushes it to the bottom, sticky keeps it in view -->
+          <footer
+            class="site-footer mt-auto position-sticky bottom-0 py-3 wt-600 ibm-plex-sans grey-03"
+          >
+            <div class="d-flex flex-row justify-content-between fs-xxs">
+              <div class="pt-1 ibm-plex-serif fg-3">v1.0.0</div>
+
+              <a class="icon-link ibm-plex-sans-condensed fw-800" href="#">
+                <svg
+                  class="white-05"
+                  width="15"
+                  height="15"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <use href="#icon-email" />
+                </svg>
+                Email
+              </a>
+
+              <a class="icon-link ibm-plex-sans-condensed fw-800" href="#">
+                <svg
+                  class="white-05"
+                  width="13"
+                  height="13"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <use href="#icon-linkedin" />
+                </svg>
+                LinkedIn
+              </a>
+
+              <a class="icon-link ibm-plex-sans-condensed fw-800" href="#">
+                <svg
+                  class="white-05"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <use href="#icon-github" />
+                </svg>
+                GitHub
+              </a>
+
+              <a class="icon-link ibm-plex-sans-condensed fw-800" href="#">
+                <svg
+                  class="white-05"
+                  width="13"
+                  height="13"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <use href="#icon-x" />
+                </svg>
+                x.com
               </a>
             </div>
-          </div>
+          </footer>
         </div>
-      </div>
+      </main>
     </div>
 
-    <!-- UPDATED: mosaic layout (kept your images + titles exactly) -->
-    <div class="container-fluid mt-5 pb-1">
-      <div class="project-header mb-2">ACADEMIC PROJECTS</div>
-      <div class="mosaic-3">
-        <div class="tile tile-mvc">
-          <div class="tile-media">
-            <img
-              src="img/MVC_Preview.svg"
-              alt="Norm Walterson Furnitures Website"
-            />
-          </div>
-          <div class="preview-title mt-2 ms-2">
-            Norm Walterson Furnitures Website
-          </div>
-          <div class="small-title mt-1">WEB DESIGN | PRODUCT DESIGN</div>
-        </div>
-
-        <div class="tile tile-capstone">
-          <div class="tile-media">
-            <img src="img/Capstone_preview.svg" />
-          </div>
-          <div class="preview-title mt-2 ms-2">
-            Easechedemy: Web-Based Scheduling System
-          </div>
-          <div class="small-title mt-1">CAPSTONE PROJECT</div>
-        </div>
-
-        <div class="tile tile-bento">
-          <div class="tile-media">
-            <img src="img/bento.gif" />
-          </div>
-          <div class="preview-title mt-2 ms-2">REBEL</div>
-          <div class="small-title mt-1">WEB DESIGN | PRODUCT DESIGN</div>
-        </div>
-
-        <div class="tile tile-pos">
-          <div class="tile-media">
-            <img src="img/Box_cof_preview.svg" />
-          </div>
-          <div class="preview-title mt-2 ms-2">Box Coffee</div>
-          <div class="small-title mt-1">POINT OF SALE | REST API</div>
-        </div>
-
-        <div class="tile tile-api">
-          <div class="tile-media">
-            <img src="img/API_preview.svg" />
-          </div>
-          <div class="preview-title mt-2 ms-2">Rick and Morty API</div>
-          <div class="small-title mt-1">API INTEGRATION</div>
-        </div>
-
-        <div class="tile tile-parallax">
-          <div class="tile-media">
-            <img src="img/parallax.gif" />
-          </div>
-          <div class="preview-title mt-2 ms-2">Parallax Website</div>
-          <div class="small-title mt-1">INTERACTION DESIGN</div>
-        </div>
-      </div>
-    </div>
-
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]',
-      );
-      const tooltipList = [...tooltipTriggerList].map(
-        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl),
-      );
-    </script>
   </body>
 </html>
