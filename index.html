@@ -71,6 +71,14 @@
           d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
         />
       </symbol>
+      <symbol id="icon-house-fill" viewBox="0 0 16 16">
+        <path
+          d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"
+        />
+        <path
+          d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"
+        />
+      </symbol>
     </svg>
 
     <!-- Page shell: full-height column so the footer can sit at the bottom -->
@@ -79,7 +87,7 @@
         <!-- Content column: everything inside shares one width -->
         <div class="xl:col-5 lg:col-10 md:col-10 sm:col-10 d-flex flex-column">
           <!-- Profile -->
-          <section class="content mt-10" aria-labelledby="profile-name">
+          <section class="content mt-7" aria-labelledby="profile-name">
             <div
               class="d-flex flex-row justify-content-between align-items-center"
             >
@@ -99,9 +107,21 @@
                   >
                     Anyl Uriarte
                   </h1>
-                  <p class="mb-0 ibm-plex-serif fs-xxs fg-black">
-                    upskilling/unemployed
-                  </p>
+                  <div
+                    class="d-flex flex-row align-items-center space-x-1 pb-1"
+                  >
+                    <p class="mb-0 ibm-plex-serif fs-xxs fg-3">
+                      upskilling @
+                      <svg
+                        width="10"
+                        height="10"
+                        fill="currentColor"
+                        class="bi bi-house-fill"
+                      >
+                        <use href="#icon-house-fill" />
+                      </svg>
+                    </p>
+                  </div>
                 </div>
               </div>
               <p
@@ -133,20 +153,20 @@
           </section>
 
           <!-- Projects: cards are rendered into #projectContainer by script.js -->
-          <section class="mt-12" aria-labelledby="projects-title">
+          <section class="mt-12 mb-12" aria-labelledby="projects-title">
             <h2
               id="projects-title"
-              class="text-center ibm-plex-sans-condensed fs-xs fg-black fw-700"
+              class="text-center ibm-plex-sans-condensed fs-xs fg-2 fw-700"
             >
               $ Notable projects
             </h2>
 
-            <div class="row mt-2 g-7" id="projectContainer"></div>
+            <div class="row mt-5 g-7" id="projectContainer"></div>
           </section>
 
           <!-- Footer: mt-auto pushes it to the bottom, sticky keeps it in view -->
           <footer
-            class="site-footer mt-auto position-sticky bottom-0 py-3 wt-600 ibm-plex-sans grey-03"
+            class="site-footer mt-auto position-static bottom-0 py-3 wt-600 ibm-plex-sans grey-03"
           >
             <div class="d-flex flex-row justify-content-between fs-xxs">
               <div class="pt-1 ibm-plex-serif fg-3">v1.0.0</div>
