@@ -1,19 +1,18 @@
 const portfolioData = [
   {
     title: "Hello, abh (Assistive Bot for Habits)",
-    description:
-      "AI bot that lives in telegram chat that plans, assists and gives advice about habits.",
+    description: "$",
   },
 
   {
-    title: "Community Q&A/Freedom wall",
+    title: "Community Q&A/Freedom Wall",
     description:
       "A platform that helps a community of student spread and ask valuable information.",
   },
 
   {
-    title: "Event management platform",
-    description: "Built using HTML/CSS, Javascript, PHP, and MySQL",
+    title: "Event Management Platform",
+    description: "$",
   },
 
   {
@@ -21,11 +20,11 @@ const portfolioData = [
     description: "$",
   },
   {
-    title: "",
+    title: "Point of Sale Platform",
     description: "$",
   },
   {
-    title: "",
+    title: "Scheduling System",
     description: "$",
   },
 ];
