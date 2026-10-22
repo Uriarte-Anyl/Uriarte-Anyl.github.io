@@ -50,14 +50,6 @@
 
 /* ------------------------------------------------------------------ */
 
-/* TYPOGRAPHY SETTINGS */
-.text-wrap {
-  overflow-wrap: break-word;
-  hyphens: manual;
-}
-
-/* ------------------------------------------------------------------ */
-
 /* IMAGE SETTINGS */
 .image-wrap {
   width: 100%;
