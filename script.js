@@ -1,7 +1,8 @@
 const portfolioData = [
   {
     title: "Hello, abh (Assistive Bot for Habits)",
-    description: "$",
+    description:
+      "Assistant AI that lives inside telegram, plans and gives advices about your habits.",
     hasLink: false,
     inDevelopment: true,
     link: "",
@@ -18,32 +19,36 @@ const portfolioData = [
 
   {
     title: "Event Management Platform",
-    description: "$",
+    description:
+      "Final team project: organize, host, and attend events with maps, QR codes, and email.",
     hasLink: true,
     inDevelopment: false,
-    link: "",
+    link: "https://github.com/pupstc-student-academic-works/adet-grp-7",
   },
 
   {
     title: "Machine learning (image classification)",
-    description: "$",
+    description:
+      "Academic dog-vs-cat image classifier built with PyTorch, AdamW, and Matplotlib.",
     hasLink: true,
     inDevelopment: false,
-    link: "",
+    link: "https://github.com/Uriarte-Anyl/image-classification",
   },
   {
     title: "Point of Sale Platform",
-    description: "$",
+    description:
+      "Academic project with live order totals and receipts. Menu generated from data.",
     hasLink: true,
     inDevelopment: false,
-    link: "",
+    link: "Course/ADET/A04/index.html",
   },
   {
     title: "Scheduling System",
-    description: "$",
-    hasLink: false,
-    inDevelopment: true,
-    link: "",
+    description:
+      "Web-based scheduling system for Almond Academy Foundation Inc.",
+    hasLink: true,
+    inDevelopment: false,
+    link: "https://github.com/StackedFrogs/Easechedemy.com",
   },
 ];
 
