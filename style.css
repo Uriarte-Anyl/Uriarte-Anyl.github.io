@@ -65,6 +65,58 @@
 
 /* ------------------------------------------------------------------ */
 
+/* PROJECT CARDS */
+
+/* Hover effect for projects that have a link: title, description, arrow and line change colour */
+.project-link header,
+.project-link article > p,
+.project-link .bi-arrow-up-right {
+  transition: color 0.2s ease;
+}
+
+.project-link .project-line {
+  transition: border-color 0.2s ease;
+}
+
+.project-link:hover header,
+.project-link:focus-visible header,
+.project-link:hover article > p,
+.project-link:focus-visible article > p,
+.project-link:hover .bi-arrow-up-right,
+.project-link:focus-visible .bi-arrow-up-right {
+  color: rgb(34, 0, 255) !important;
+}
+
+.project-link:hover .project-line,
+.project-link:focus-visible .project-line {
+  border-color: rgb(34, 0, 255) !important;
+}
+
+/* "in development" label sits where the arrow icon would be */
+.in-development {
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* FOOTER SOCIAL LINKS: icon and label share the link colour (fg-4 in the
+   markup) and both turn blue on hover */
+.site-footer .icon-link {
+  transition: color 0.2s ease;
+}
+
+.site-footer .icon-link svg {
+  color: inherit !important;
+  fill: currentColor;
+}
+
+.site-footer .icon-link:hover,
+.site-footer .icon-link:focus-visible {
+  color: rgb(34, 0, 255) !important;
+}
+
+/* ------------------------------------------------------------------ */
+
 /* CUSTOM UTIL */
 
 /* FONT SIZE */
